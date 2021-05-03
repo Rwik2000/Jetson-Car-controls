@@ -20,7 +20,7 @@ pipeline.start(config)
 
 try:
     while True:
-
+        # print('yo')
         # Wait for a coherent pair of frames: depth and color
         frames = pipeline.wait_for_frames()
         depth_frame = frames.get_depth_frame()
@@ -41,9 +41,11 @@ try:
         # Show images
         cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
         cv2.imshow('RealSense', images)
+        cv2.imwrite('i.jpg', images)
         cv2.waitKey(1)
+        # break
 
 finally:
-
+    
     # Stop streaming
     pipeline.stop()

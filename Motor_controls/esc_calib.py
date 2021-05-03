@@ -23,7 +23,7 @@ input("min")
 time.sleep(1)
 
 
-esc.throttle = 0.07
+esc.throttle = 0.075
 time.sleep(1)
 esc.throttle=-1
 pwm.deinit()
